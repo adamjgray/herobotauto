@@ -25,7 +25,6 @@ brain Brain;
   for (int iterator = 0; iterator < iterations; iterator++)
 // END IQ MACROS
 
-
 // Robot configuration code.
 inertial BrainInertial = inertial();
 motor ArmMoverMotorA = motor(PORT6, true);
@@ -98,7 +97,6 @@ float in_to_deg(float inches) {
 
 // "when buttonLeft pressed" hat block
 void onevent_buttonLeft_pressed_0()  {
-
  RightDrive.spinFor(forward, in_to_deg(1), degrees, false);
  LeftDrive.spinFor(forward, in_to_deg(1), degrees, true);
 
@@ -132,7 +130,6 @@ void onevent_buttonCheck_pressed_0() {
     Brain.Screen.clearScreen();
     Brain.Screen.setCursor(1, 1);
 
-    // Brain.Screen.print("BrainInertial.rotation(degrees) %f", 5.0);
     Brain.Screen.print("GYRO: %f", BrainInertial.rotation(degrees));
     wait(16,msec);
   }
@@ -212,6 +209,7 @@ int main() {
   wait(2, seconds);
   
   Brain.playSound(tada);
+
   // register event handlers
   Brain.buttonLeft.pressed(onevent_buttonLeft_pressed_0);
   Brain.buttonCheck.pressed(onevent_buttonCheck_pressed_0);
