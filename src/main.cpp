@@ -202,6 +202,10 @@ void onevent_buttonCheck_pressed_0() {
   LeftDrive.spinFor(forward, in_to_deg(20), degrees, true);
 }
 
+void on_release_lighty() {
+  Brain.playSound(soundType::wrongWay);
+}
+
 float gyro_cur_deg = BrainInertial.rotation(degrees);
 
 int main() {  
@@ -213,6 +217,7 @@ int main() {
   // register event handlers
   Brain.buttonLeft.pressed(onevent_buttonLeft_pressed_0);
   Brain.buttonCheck.pressed(onevent_buttonCheck_pressed_0);
+  Lighty.released(on_release_lighty);
     
   wait(15, msec);
   whenStarted1();
