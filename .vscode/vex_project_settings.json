@@ -1,0 +1,19 @@
+{
+	"extension": {
+		"version": "0.5.0",
+		"json": 2
+	},
+	"project": {
+		"name": "HeroBotAuto",
+		"description": "",
+		"creationDate": "9/14/2023, 7:53:39 PM",
+		"platform": "IQ2",
+		"language": "cpp",
+		"slot": 3,
+		"sdkVersion": "IQ2_20220726_10_00_00",
+		"cpp": {
+			"includePath": [],
+			"printf_float": false
+		}
+	}
+}
