@@ -204,6 +204,7 @@ void onevent_buttonCheck_pressed_0() {
 
 void on_release_lighty() {
   Brain.playSound(soundType::wrongWay);
+  Lighty.setColor(color::red);
 }
 
 float gyro_cur_deg = BrainInertial.rotation(degrees);
